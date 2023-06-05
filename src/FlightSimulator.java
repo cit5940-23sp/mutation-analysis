@@ -5,7 +5,7 @@ import java.awt.geom.Point2D;
 public class FlightSimulator {
 	
 	public static boolean simulateFlights(Airplane[] planes, int steps, double safeDistance) {
-		
+
 		if (planes == null || steps < 1 || safeDistance < 0) 
 			throw new IllegalArgumentException();
 		
@@ -13,7 +13,7 @@ public class FlightSimulator {
 			if (planes[i] == null) throw new IllegalArgumentException();
 			if (planes[i].velocity < 0) throw new IllegalArgumentException();
 		}
-		
+
 		// first, make sure they're all a safe distance apart before simulating
 		for (int i = 0; i < planes.length; i++) {
 			Point2D.Double point1 = planes[i].location;
